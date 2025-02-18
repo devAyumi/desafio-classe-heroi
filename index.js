@@ -1,4 +1,4 @@
-// const prompt = require('prompt-sync')();
+const prompt = require('prompt-sync')();
 
 class Heroi{
     constructor(name, age, type){
@@ -17,6 +17,8 @@ class Heroi{
             blow = "artes marciais";
         } else if (this.type == "ninja"){
             blow = "shuriken";
+        } else {
+            blow = "Tipo de herói informado desconhecido."
         }
         return blow;
     }
@@ -26,12 +28,11 @@ class Heroi{
         console.log(`O ${this.type} atacou usando ${blow}`);
     }
 }
-/*
+
 const nomeHeroi = prompt("Insira o nome do herói: ");
-const idadeHeroi = prompt("Insira a idade do herói: ");
+const idadeHeroi = parseInt(prompt("Insira a idade do herói: "));
 const tipoHeroi = prompt("Insira o tipo do herói: ");
 
 const novoHeroi = new Heroi(nomeHeroi, idadeHeroi, tipoHeroi);
-*/
-let novoHeroi = new Heroi("Ayumi", 19, "monge");
+
 novoHeroi.attack();
